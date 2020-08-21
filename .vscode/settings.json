@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "aws.profile": "profile:default"
+}

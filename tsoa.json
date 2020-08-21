@@ -5,10 +5,10 @@
     "src/**/*.controller.ts"
   ],
   "spec": {
-    "outputDirectory": "docs",
+    "outputDirectory": "build/docs",
     "specVersion": 3
   },
   "routes": {
-    "routesDir": "src"
+    "routesDir": "build"
   }
 }

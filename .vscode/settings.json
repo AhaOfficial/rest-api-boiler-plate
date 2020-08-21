@@ -4,5 +4,6 @@
     "source.fixAll": true
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "aws.profile": "profile:default"
+  "aws.profile": "profile:default",
+  "files.autoSave": "onFocusChange"
 }

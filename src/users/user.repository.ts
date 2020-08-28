@@ -10,7 +10,7 @@ export class UserRepository {
       email: 'jane@doe.com',
       name: name ?? 'Jane Doe',
       status: 'Happy',
-      phoneNumber: '01063651638'
+      phoneNumber: ''
     }
   }
 

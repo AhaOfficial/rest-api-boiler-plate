@@ -1,17 +1,34 @@
 import express from 'express'
+import helmet from 'helmet'
 import bodyParser from 'body-parser'
+import cors from 'cors'
+import cookieParser from 'cookie-parser'
 import { RegisterRoutes } from '../build/routes'
+
 
 const app = express()
 
-// Use body parser to read sent json payloads
+app.use(cors({
+  origin: '*',
+  methods: 'GET,PUT,POST,DELETE',
+  preflightContinue: false
+}))
+app.use(helmet())
 app.use(
   bodyParser.urlencoded({
     extended: true
   })
 )
+app.use(express.json())
+app.use(cookieParser())
 
-app.use(bodyParser.json())
+if (process.env.NODE_ENV !== 'production') {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires, global-require
+  const errorHandler = require('errorhandler')
+
+  app.use(errorHandler())
+}
+
 
 RegisterRoutes(app)
 
